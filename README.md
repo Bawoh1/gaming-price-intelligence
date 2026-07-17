@@ -17,7 +17,7 @@ Python · PostgreSQL · SQL · Power BI · Git
 
 ## Project Status
 
-🔨 In Progress — Week 1
+🔨 In Progress — 
 
 ## Setup
 
