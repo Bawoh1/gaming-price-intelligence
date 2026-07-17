@@ -1,0 +1,12 @@
+[
+  {"title": "Elden Ring", "platform": "PC", "original_price": 59.99, "sale_price": 35.99, "store": "Steam"},
+  {"title": "Hades", "platform": "PC", "original_price": 24.99, "sale_price": 12.49, "store": "Epic"},
+  {"title": "Red Dead Redemption 2", "platform": "PC", "original_price": 59.99, "sale_price": 17.99, "store": "Steam"},
+  {"title": "Celeste", "platform": "PC", "original_price": 19.99, "sale_price": 3.99, "store": "Steam"},
+  {"title": "Cyberpunk 2077", "platform": "PC", "original_price": 59.99, "sale_price": 23.99, "store": "GOG"},
+  {"title": "Hollow Knight", "platform": "PC", "original_price": 14.99, "sale_price": 14.99, "store": "Steam"},
+  {"title": "The Witcher 3", "platform": "PC", "original_price": 39.99, "sale_price": 7.99, "store": "GOG"},
+  {"title": "Stardew Valley", "platform": "PC", "original_price": 14.99, "sale_price": 9.99, "store": "Steam"},
+  {"title": "Death Stranding", "platform": "PC", "original_price": 59.99, "sale_price": 14.99, "store": "Epic"},
+  {"title": "Among Us", "platform": "PC", "original_price": 4.99, "sale_price": 2.49, "store": "Steam"}
+]
