@@ -13,7 +13,7 @@ def include_timestamp():
     current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     return [{**item, 'fetched_at': current_time} for item in deals]
 
-data_to_insert = [(d["title"], d["original_price"], d["sale_price"], d["store"], d["fetched_at"]) for d in include_timestamp()]
+data_to_insert = [(d["title"], d["original_price"], d["sale_price"], int(d["store"]), d["fetched_at"]) for d in include_timestamp()]
 
 def insert_deals():
     with psycopg2.connect(
@@ -24,7 +24,7 @@ def insert_deals():
         port="5432"
     ) as conn:
         with conn.cursor() as cursor:
-            insert_query = "INSERT INTO raw_deals (title, original_price, sale_price, store, fetched_at) VALUES %s"
+            insert_query = "INSERT INTO raw_deals (title, original_price, sale_price, store_id, fetched_at) VALUES %s"
 
             execute_values(cursor, insert_query, data_to_insert, template="(%s, %s, %s, %s, %s)")
             
