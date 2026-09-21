@@ -24,7 +24,7 @@ def insert_deals():
         port="5432"
     ) as conn:
         with conn.cursor() as cursor:
-            insert_query = "INSERT INTO raw_deals (title, original_price, sale_price, store_id, fetched_at) VALUES %s"
+            insert_query = "INSERT INTO raw_deals (title, original_price, sale_price, store_id, fetched_at) VALUES %s ON CONFLICT (title, store_id) DO NOTHING"
 
             execute_values(cursor, insert_query, data_to_insert, template="(%s, %s, %s, %s, %s)")
             
