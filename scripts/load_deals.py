@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from datetime import datetime
 load_dotenv()
 
+#Loading normalized deals into database
 deals = normalize_deals(collect_data())
 
 def include_timestamp():

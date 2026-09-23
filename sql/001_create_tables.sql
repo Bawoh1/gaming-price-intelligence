@@ -14,4 +14,4 @@ fetched_at TIMESTAMP
 );
 
 ALTER TABLE raw_deals
-ADD CONSTRAINT uq_deal_store UNIQUE (title, store_id);
+ADD CONSTRAINT uq_deal_store_price UNIQUE (title, store_id, sale_price);
