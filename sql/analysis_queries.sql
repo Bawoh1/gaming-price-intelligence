@@ -27,9 +27,12 @@ LIMIT 1;
 -- Top 10 games with CURRENT biggest discount
 WITH cte_discount AS (
 SELECT 
+	s.store_id,
 	s.store_name, 
+	rd.deal_id,
 	rd.title, 
-	ROUND(((rd.original_price - rd.sale_price)/rd.original_price)*100, 2) as discount_percent
+	ROUND(((rd.original_price - rd.sale_price)/rd.original_price)*100, 2) as discount_percent,
+	rd.fetched_at
 FROM 
 	raw_deals rd
 JOIN
@@ -37,7 +40,10 @@ JOIN
 WHERE 
 	fetched_at = (SELECT MAX(fetched_at) FROM raw_deals)
 )
-SELECT *
+SELECT 
+	store_name,
+	title,
+	discount_percent
 FROM cte_discount
 ORDER BY 
 	cte_discount.discount_percent DESC

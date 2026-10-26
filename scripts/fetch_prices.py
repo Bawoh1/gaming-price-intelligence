@@ -14,7 +14,6 @@ header = {
 
 response = requests.get(url, headers=header, params=query_params)
 
-found_deals = False
 # Collects data from url, only if it was a success (status code: 200)
 def collect_data():
     if response.status_code == 200:

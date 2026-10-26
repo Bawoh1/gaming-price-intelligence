@@ -1,5 +1,5 @@
-from fetch_prices import collect_data, normalize_deals
-deals = normalize_deals(collect_data())
+#from fetch_prices import collect_data, normalize_deals
+#deals = normalize_deals(collect_data())
 
 def needs_validation(deals):
     needs_valid = [d for d in deals if d['sale_price'] == 0.00]
@@ -9,7 +9,7 @@ def needs_validation(deals):
 
     return deals
 
-needs_validation(deals)
+#needs_validation(deals)
 
 
 
